@@ -1,33 +1,19 @@
 package Day2;
 
+import Utility.Util;
+
 public class VariablesAndTypes {
 
-    /**
-     *
-     * @param c - initial investment
-     * @param r - yearly rate .01 is 1%
-     * @param t - number of years
-     * @param n - number of times to compound per year
-     * @return The final value of the investment
-     */
-    public static double investment(double c,
-                                    double r,
-                                    double t,
-                                    int n) {
-        return c*Math.pow(1+r/n, t*n);
-    }
 
-    public static double f2c(double f) {
-        return 5/9.0*(f - 32);
-    }
+
 
     // main is the name of a function
     // void is the return type
     public static void main(String[] args) {
         // cast the double 1e9 to an integer
-        System.out.println(investment(1,1.0,1,(int) 1e12));
-        System.out.println(investment(1,1.0,1,(int) 1e9));
-        System.out.println(f2c(212));
+        System.out.println(Util.investment(1,1.0,1,(int) 1e12));
+        System.out.println(Util.investment(1,1.0,1,(int) 1e9));
+        System.out.println(Util.f2c(212));
 
         int x = 7;
         System.out.println(x*x);
