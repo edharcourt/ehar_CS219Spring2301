@@ -69,7 +69,7 @@ public class HW3 {
     }
 
     /**
-     * You have a lottery ticket with integers x, y, and x, each of which is
+     * You have a lottery ticket with integers a, b, and c, each of which is
      * 0, 1, or 2. If they are all 2, your winnings are $10. Otherwise, if
      * they are all the same, your winnings are $5. Otherwise, so long as both
      * b and c are different from a, the result is $1. Otherwise the result is $0.
