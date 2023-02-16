@@ -3,20 +3,28 @@ package LoopExercises;
 public class MoreLoopExercises {
 
     /*
-     * You are given two strings - pattern and source. The first string pattern
-     * contains only the symbols 0 and 1, and the second string source
-     * contains only lowercase English letters. Let's say that pattern matches a
-     * substring of source if the following three conditions are met:
+     * You are given two strings - pattern and source.
+     * The first string pattern contains only the symbols
+     * 0 and 1, and the second string source contains
+     * only lowercase English letters. Let's say that
+     * pattern matches a substring of source if the
+     * following three conditions are met:
      *
-     *     1) they have equal length,
-     *     2) for each 0 in pattern the corresponding letter in the substring is a vowel,
-     *     3) for each 1 in pattern the corresponding letter is a consonant.
+     *   1) they have equal length
      *
-     * Your task is to calculate the number of substrings of source that match pattern.
+     *   2) for each 0 in pattern the corresponding
+     *      letter in the substring is a vowel
+     *
+     *   3) for each 1 in pattern the corresponding
+     *      letter is a consonant.
+     *
+     * Your task is to calculate the number of substrings of
+     * source that match pattern.
      *
      * Example
      *
-     * For pattern = "010" and source = "amazing", the output should be solution(pattern, source) = 2.
+     * For pattern = "010" and source = "amazing", the function should
+     * return 2.
      *
      * "010" matches "ama", because both 0s match a,
      *       which is a vowel, and 1 match m, which is a consonant;
@@ -24,16 +32,19 @@ public class MoreLoopExercises {
      * "010" doesn't "maz", because the first 0 corresponds to an m,
      *       which is a consonant, not a vowel;
      *
-     * "010" matches "azi", because the first 0 matches an a (vowel), 1 matches z (consonant),
-     *       and the second 0 matches i (vowel);
+     * "010" matches "azi", because the first 0 matches an a (vowel),
+     * 1 matches z (consonant), and the second 0 matches i (vowel);
      *
-     * "010" doesn't match "zin", because the first 0 corresponds to a consonant (z);
+     * "010" doesn't match "zin", because the first 0 corresponds
+     * to a consonant (z);
      *
-     * "010" doesn't match "ing", because the second 0 corresponds to the letter g, which is a consonant.
+     * "010" doesn't match "ing", because the second 0 corresponds
+     * to the letter g, which is a consonant.
      *
      * So, there are only 2 matches.
      *
-     * For pattern = "110" and source = "programming", the output should be 3.
+     * For pattern = "110" and source = "programming", the function
+     * should return 3.
      */
     public static int match(String patt, String src) {
         return -1;
