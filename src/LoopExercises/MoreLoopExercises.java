@@ -2,6 +2,10 @@ package LoopExercises;
 
 public class MoreLoopExercises {
 
+    public static boolean isVowel(char ch) {
+        return "aeiou".indexOf(ch) > -1;
+    }
+
     /*
      * You are given two strings - pattern and source.
      * The first string pattern contains only the symbols
@@ -47,7 +51,30 @@ public class MoreLoopExercises {
      * should return 3.
      */
     public static int match(String patt, String src) {
-        return -1;
+        int cnt = 0;
+
+        // for each starting location in the src
+        for (int i = 0; i <= src.length() - patt.length(); i++) {
+            int j = 0; // index in the patt
+            boolean done = false;
+
+            while (j < patt.length() && !done) {
+                char src_ch = src.charAt(i + j);
+                char patt_ch = patt.charAt(j);
+
+                if (isVowel(src_ch) && patt_ch == '0' ||
+                    !isVowel(src_ch) && patt_ch == '1') {
+                    j++;
+                }
+                else {
+                    done = true;
+                }
+            }  // while
+            if (j == patt.length()) {
+                cnt++;
+            }
+        } // for
+        return cnt;
     }
 
     /*
@@ -217,6 +244,9 @@ public class MoreLoopExercises {
      * Thoroughly test all of your functions above.
      */
     public static void main(String[] args) {
-        // add tests
+        System.out.println(match("010", "amazing") == 2);
+        System.out.println(match("110", "programming") == 3);
+        System.out.println(match("000", "programming") == 0);
+        System.out.println(match("11011", "programming") == 3);
     }
 }
