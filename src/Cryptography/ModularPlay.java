@@ -9,6 +9,16 @@ public class ModularPlay {
 
         System.out.println(Math.floorMod(-15,12));
         System.out.println(Math.floorDiv(-15,12));
+
+        System.out.println(13 % 3 == 1);
+        System.out.println(-13 % 3 == -1);
+        System.out.println(13 % -3 == 1);
+        System.out.println(-13 % -3 == -1);
+        System.out.println(Math.floorMod(13,3) == 1);
+        System.out.println(Math.floorMod(-13,3) == 2);
+        System.out.println(Math.floorMod(13,-3) == -2);
+        System.out.println(Math.floorMod(-13,-3) == -1);
+
     }
 
 }
