@@ -1,5 +1,10 @@
 package Utility;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Scanner;
+
 public class Util {
 
     /**
@@ -33,5 +38,27 @@ public class Util {
                                     int n) {
         return c*Math.pow(1+r/n, t*n);
     }
+
+    public static Scanner openSite(String path) {
+        try {
+            URL url = new URL(path);
+            Scanner s = new Scanner(url.openConnection().getInputStream());
+            return s;
+        } catch (MalformedURLException e) {
+            System.out.println(
+                    "Error: URL is not formed properly.");
+
+            // Should we just quit, or let the
+            // function that called us handle the
+            // error?
+            return null; // the null reference
+            //throw new RuntimeException(e);
+        } catch (IOException e) {
+            System.out.println("Error: Cannot open web site.");
+            return null;
+            //throw new RuntimeException(e);
+        }
+    }
+
 
 }
